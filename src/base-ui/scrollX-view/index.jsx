@@ -2,6 +2,7 @@ import React, { memo, useEffect, useRef, useState } from 'react'
 import { ScrollXViewWapper } from './style'
 import IconArrowLeft from '@/assets/svg/icon_arrow_left'
 import IconArrowRight from '@/assets/svg/icon_arrow_right'
+import BtnWapper from '@/hooks/btn-bgc'
 
 const ScrollXView = memo((props) => {
   const { left = 0, right = 0 } = props
@@ -40,7 +41,7 @@ const ScrollXView = memo((props) => {
         <div
           className='left control'
           onClick={e => controlClickHandle(false)}>
-          <IconArrowLeft />
+          <BtnWapper icon={<IconArrowLeft />} />
         </div>
       }
       {
@@ -48,7 +49,7 @@ const ScrollXView = memo((props) => {
         <div
           className='right control'
           onClick={e => controlClickHandle(true)}>
-          <IconArrowRight />
+          <BtnWapper icon={<IconArrowRight />} />
         </div>
       }
       <div className="scroll">

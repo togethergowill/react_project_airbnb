@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const EntireFilterWrapper = styled.div`
   position: fixed;
-  z-index: 8;
+  z-index: 888;
   top: 80px;
   left: 0;
   right: 0;

@@ -9,6 +9,7 @@ import HomeSectionV1 from './cpns/home-section-v1'
 import HomeSectionV2 from './cpns/home-section-v2'
 import HomeSectionV3 from './cpns/home-section-v3'
 import HomeSectionV4 from './cpns/home-section-v4'
+import { changeHeaderConfigAction } from '@/store/modules/mian'
 
 const Home = memo(() => {
   const {
@@ -30,6 +31,7 @@ const Home = memo(() => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchHomDataAction())
+    dispatch(changeHeaderConfigAction({ isFixed: true, topAlpha: true }))
   }, [dispatch])
   return (
     <HomeWrapper>
